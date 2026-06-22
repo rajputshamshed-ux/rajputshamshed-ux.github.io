@@ -1,65 +1,30 @@
 baseURL = "https://rajputshamshed-ux.github.io/"
 languageCode = "fr-fr"
-title = "RajputShamshed UX | Cyber Hub"
+title = "RajputShamshed UX"
 theme = "PaperMod"
 
 [params]
     env = "production"
     title = "RajputShamshed UX"
-    description = "Hub de conformité GRC, Cybersécurité et Fiches Techniques"
-    
-    # Configuration du style PaperMod
-    defaultTheme = "dark" # Mode sombre automatique, très typé cyber
+    description = "Hub de conformite GRC et Cybersecurity"
+    defaultTheme = "dark"
     showCodeCopyButtons = true
-    
-    # Profil sur la page d'accueil
+
     [params.homeInfoParams]
-        Title = "👋 Bienvenue sur Cyber Hub v2"
-        Content = "Analyses de conformité (PCI-DSS, ISO 27001), Gouvernance des données de santé (HIPAA) et fiches techniques offensives/défensives."
+        Title = "Bienvenue sur Cyber Hub"
+        Content = "Analyses de conformite PCI-DSS, ISO 27001 et fiches techniques."
 
-    # Menu de navigation du haut
-    [[menu.main]]
-        name = "✍️ Blog / Articles"
-        url = "/posts/"
-        weight = 10
-    [[menu.main]]
-        name = "📄 Cheatsheets"
-        url = "/cheatsheets/"
-        weight = 20
-    [[menu.main]]
-        name = "🛠️ Admin"
-        url = "/admin/"
-        weight = 30
-EOFcat << 'EOF' > ~/cyber-hub-v2/hugo.toml
-baseURL = "https://rajputshamshed-ux.github.io/"
-languageCode = "fr-fr"
-title = "RajputShamshed UX | Cyber Hub"
-theme = "PaperMod"
+[[menu.main]]
+    name = "Articles"
+    url = "/posts/"
+    weight = 10
 
-[params]
-    env = "production"
-    title = "RajputShamshed UX"
-    description = "Hub de conformité GRC, Cybersécurité et Fiches Techniques"
-    
-    # Configuration du style PaperMod
-    defaultTheme = "dark" # Mode sombre automatique, très typé cyber
-    showCodeCopyButtons = true
-    
-    # Profil sur la page d'accueil
-    [params.homeInfoParams]
-        Title = "👋 Bienvenue sur Cyber Hub v2"
-        Content = "Analyses de conformité (PCI-DSS, ISO 27001), Gouvernance des données de santé (HIPAA) et fiches techniques offensives/défensives."
+[[menu.main]]
+    name = "Cheatsheets"
+    url = "/cheatsheets/"
+    weight = 20
 
-    # Menu de navigation du haut
-    [[menu.main]]
-        name = "✍️ Blog / Articles"
-        url = "/posts/"
-        weight = 10
-    [[menu.main]]
-        name = "📄 Cheatsheets"
-        url = "/cheatsheets/"
-        weight = 20
-    [[menu.main]]
-        name = "🛠️ Admin"
-        url = "/admin/"
-        weight = 30
+[[menu.main]]
+    name = "Admin"
+    url = "/admin/"
+    weight = 30
