@@ -1,4 +1,65 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://rajputshamshed-ux.github.io/"
+languageCode = "fr-fr"
+title = "RajputShamshed UX | Cyber Hub"
 theme = "PaperMod"
+
+[params]
+    env = "production"
+    title = "RajputShamshed UX"
+    description = "Hub de conformité GRC, Cybersécurité et Fiches Techniques"
+    
+    # Configuration du style PaperMod
+    defaultTheme = "dark" # Mode sombre automatique, très typé cyber
+    showCodeCopyButtons = true
+    
+    # Profil sur la page d'accueil
+    [params.homeInfoParams]
+        Title = "👋 Bienvenue sur Cyber Hub v2"
+        Content = "Analyses de conformité (PCI-DSS, ISO 27001), Gouvernance des données de santé (HIPAA) et fiches techniques offensives/défensives."
+
+    # Menu de navigation du haut
+    [[menu.main]]
+        name = "✍️ Blog / Articles"
+        url = "/posts/"
+        weight = 10
+    [[menu.main]]
+        name = "📄 Cheatsheets"
+        url = "/cheatsheets/"
+        weight = 20
+    [[menu.main]]
+        name = "🛠️ Admin"
+        url = "/admin/"
+        weight = 30
+EOFcat << 'EOF' > ~/cyber-hub-v2/hugo.toml
+baseURL = "https://rajputshamshed-ux.github.io/"
+languageCode = "fr-fr"
+title = "RajputShamshed UX | Cyber Hub"
+theme = "PaperMod"
+
+[params]
+    env = "production"
+    title = "RajputShamshed UX"
+    description = "Hub de conformité GRC, Cybersécurité et Fiches Techniques"
+    
+    # Configuration du style PaperMod
+    defaultTheme = "dark" # Mode sombre automatique, très typé cyber
+    showCodeCopyButtons = true
+    
+    # Profil sur la page d'accueil
+    [params.homeInfoParams]
+        Title = "👋 Bienvenue sur Cyber Hub v2"
+        Content = "Analyses de conformité (PCI-DSS, ISO 27001), Gouvernance des données de santé (HIPAA) et fiches techniques offensives/défensives."
+
+    # Menu de navigation du haut
+    [[menu.main]]
+        name = "✍️ Blog / Articles"
+        url = "/posts/"
+        weight = 10
+    [[menu.main]]
+        name = "📄 Cheatsheets"
+        url = "/cheatsheets/"
+        weight = 20
+    [[menu.main]]
+        name = "🛠️ Admin"
+        url = "/admin/"
+        weight = 30
