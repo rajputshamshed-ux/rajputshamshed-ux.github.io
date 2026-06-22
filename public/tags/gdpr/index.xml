@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GDPR on My New Hugo Project</title>
+    <link>http://localhost:1313/tags/gdpr/</link>
+    <description>Recent content in GDPR on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gdpr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Designing an Enterprise Data Classification Policy for Healthcare</title>
+      <link>http://localhost:1313/posts/data-classification/</link>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/data-classification/</guid>
+      <description>&lt;p&gt;In healthcare IT, data governance isn&amp;rsquo;t just a corporate checklist—it&amp;rsquo;s a legal shield and a foundational pillar of patient trust. Managing a mixture of Protected Health Information (PHI), financial metrics, and day-to-day internal communications requires a systematic approach.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

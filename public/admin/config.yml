@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: rajputshamshed-ux/rajputshamshed-ux.github.io
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "✍️ Articles de Blog"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date de Publication", name: "date", widget: "datetime" }
+      - { label: "Catégorie / Tags", name: "tags", widget: "list" }
+      - { label: "Corps de l'article", name: "body", widget: "markdown" }
+
+  - name: "cheatsheets"
+    label: "📄 Fiches de triche (Cheatsheets)"
+    folder: "content/cheatsheets"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Sujet / Outil", name: "subject", widget: "string" }
+      - { label: "Contenu de la fiche", name: "body", widget: "markdown" }

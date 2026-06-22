@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on My New Hugo Project</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on My New Hugo Project</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Designing an Enterprise Data Classification Policy for Healthcare</title>
+      <link>http://localhost:1313/posts/data-classification/</link>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/data-classification/</guid>
+      <description>&lt;p&gt;In healthcare IT, data governance isn&amp;rsquo;t just a corporate checklist—it&amp;rsquo;s a legal shield and a foundational pillar of patient trust. Managing a mixture of Protected Health Information (PHI), financial metrics, and day-to-day internal communications requires a systematic approach.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Security Policy Compliance Assessment &amp; Roadmap</title>
+      <link>http://localhost:1313/posts/article-pci-dss/</link>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/article-pci-dss/</guid>
+      <description>&lt;h3 id=&#34;executive-summary&#34;&gt;Executive Summary&lt;/h3&gt;
+&lt;p&gt;RetailMax Corporation is positioning itself for major business growth by pursuing PCI-DSS v4.0, ISO 27001:2022, and SOC 2 Type II certifications. However, the current security policy infrastructure introduces significant compliance and legal risk.&lt;/p&gt;
+&lt;p&gt;A thorough review reveals that several core policies are completely missing (Incident Response, Data Classification, Access Control), while existing policies are outdated (ranging from 2019 to 2021) and fail to reflect modern security landscapes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
