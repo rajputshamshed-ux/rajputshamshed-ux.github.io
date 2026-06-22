@@ -27,8 +27,8 @@ jobs:
     steps:
       - name: Install Hugo CLI
         run: |
-          wget -O ${{ r temptations.tmp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.deb
-          sudo dpkg -i ${{ r temptations.tmp }}/hugo.deb
+          wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.deb
+          sudo dpkg -i /tmp/hugo.deb
       - name: Checkout
         uses: actions/checkout@v4
         with:
