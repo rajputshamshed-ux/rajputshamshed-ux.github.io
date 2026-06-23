@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RajputShamshed UX - Blog</title>
+  <title>Titre de l'Article - RajputShamshed UX</title>
   <style>
+    /* 1. ON REPREND EXACTEMENT TON CSS DE BASE (COULEURS, POLICES, HEADER)
+    */
     :root {
       --bg-color: #0d1117;
       --card-bg: #161b22;
@@ -12,6 +14,7 @@
       --text-main: #c9d1d9;
       --text-muted: #8b949e;
       --accent-color: #58a6ff;
+      --code-bg: #010409;
     }
     body {
       background-color: var(--bg-color);
@@ -22,47 +25,51 @@
       line-height: 1.6;
     }
     .container { max-width: 1000px; margin: 0 auto; }
+    
+    /* Navigation */
     header { border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 30px; }
-    h1 { color: #fff; font-size: 2.2rem; margin-bottom: 5px; }
+    .site-title { color: #fff; font-size: 2.2rem; margin-bottom: 5px; font-weight: bold; }
     .nav-links { margin-bottom: 25px; }
-    .nav-links a {
-      text-decoration: none;
-      font-weight: bold;
-      padding: 8px 16px;
-      border-radius: 6px;
-      transition: all 0.2s;
-    }
+    .nav-links a { text-decoration: none; font-weight: bold; padding: 8px 16px; border-radius: 6px; transition: all 0.2s; }
     .nav-inactive { color: var(--text-muted); }
     .nav-inactive:hover { color: #fff; background: var(--card-bg); }
     .nav-active { color: #fff; background: var(--card-bg); border: 1px solid var(--border-color); }
     
-    /* Liste des articles */
-    .blog-grid { display: flex; flex-direction: column; gap: 20px; margin-top: 30px; }
-    .blog-card { 
-      background: var(--card-bg); 
-      border: 1px solid var(--border-color); 
-      border-radius: 8px; 
-      padding: 20px; 
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .blog-card:hover { 
-      transform: translateY(-2px); 
-      border-color: var(--accent-color); 
-    }
-    .blog-title { color: #fff; margin: 0 0 10px 0; font-size: 1.4rem; }
-    .blog-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; }
-    .blog-desc { color: var(--text-main); margin: 0; }
+    /* 2. CSS SPÉCIFIQUE POUR LIRE UN ARTICLE CONFORTABLEMENT
+    */
+    .article-header { margin-bottom: 40px; }
+    .article-title { color: #fff; font-size: 2.5rem; margin-bottom: 10px; line-height: 1.2; }
+    .article-meta { font-size: 0.95rem; color: var(--text-muted); padding-bottom: 20px; border-bottom: 1px dashed var(--border-color); }
     
+    .article-content h2 { color: #fff; margin-top: 40px; padding-bottom: 5px; border-bottom: 1px solid var(--border-color); }
+    .article-content h3 { color: #fff; margin-top: 30px; }
+    .article-content p { margin-bottom: 1.5rem; }
+    .article-content a { color: var(--accent-color); text-decoration: none; }
+    .article-content a:hover { text-decoration: underline; }
+    
+    /* Style pour le code (très important pour un blog cyber) */
+    pre { background-color: var(--code-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 16px; overflow-x: auto; }
+    code { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; font-size: 0.9em; }
+    /* Code en ligne (dans un paragraphe) */
+    p code, li code { background-color: var(--card-bg); padding: 0.2em 0.4em; border-radius: 3px; }
+    
+    /* Style pour les citations ou notes */
+    blockquote { border-left: 4px solid var(--accent-color); margin: 0; padding: 10px 20px; background-color: var(--card-bg); color: var(--text-muted); border-radius: 0 6px 6px 0; }
+    
+    /* Tables pour la GRC/Compliance */
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 20px; }
+    th, td { border: 1px solid var(--border-color); padding: 10px; text-align: left; }
+    th { background-color: var(--card-bg); color: #fff; }
+
     footer { text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; }
   </style>
 </head>
 <body>
 
 <div class="container">
+  
   <header>
-    <h1>RajputShamshed UX</h1>
+    <div class="site-title">RajputShamshed UX</div>
     <p style="color: var(--text-muted); margin-top: 0;">Cyber Security Hub & Portfolio</p>
     
     <div class="nav-links">
@@ -72,21 +79,63 @@
   </header>
 
   <main>
-    <h2>Articles récents</h2>
-    <p style="color: var(--text-muted);">Analyses de gouvernance, rapports GRC et recherches cyber.</p>
-    
-    <div class="blog-grid" id="blogList">
-      
-      <!-- ARTICLE 1 -->
-      <a href="article-pci-dss.html" class="blog-card">
-        <h3 class="blog-title">Security Policy Compliance Assessment & Roadmap</h3>
-        <div class="blog-meta">22 Juin 2026 • ⏱️ 5 min read • GRC / PCI-DSS</div>
-        <p class="blog-desc">Rapport de conformité et d'analyse des écarts (Gap Analysis) pour RetailMax Corporation face aux exigences de la norme PCI-DSS v4.0 et ISO 27001.</p>
-      </a>
+    <article>
+      <header class="article-header">
+        <h1 class="article-title">Security Policy Compliance Assessment & Roadmap</h1>
+        
+        <div class="article-meta">
+          📅 Publié le 22 Juin 2026 • ⏳ Temps de lecture : 5 min • 🏷️ Catégorie : GRC / PCI-DSS
+        </div>
+      </header>
 
-      <!-- Les prochains articles s'ajouteront ici, juste en dessous -->
+      <div class="article-content">
+        
+        <p>Bienvenue dans cet article. C'est ici que tu peux écrire ton introduction sur le rapport de conformité pour RetailMax Corporation.</p>
 
+        <h2>1. Objectif de l'évaluation</h2>
+        <p>L'objectif était d'analyser l'infrastructure existante par rapport aux normes <code>PCI-DSS v4.0</code> et de proposer une feuille de route claire.</p>
+
+        <h3>1.1 Méthodologie</h3>
+        <p>Nous avons utilisé une approche basée sur le risque...</p>
+
+        <pre><code># Exemple de configuration Firewall recommandée
+iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+iptables -A INPUT -p tcp --dport 80 -j DROP</code></pre>
+
+        <h2>2. Tableau d'Analyse des Écarts (Gap Analysis)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Exigence PCI-DSS</th>
+              <th>Statut Actuel</th>
+              <th>Recommandation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Requirement 8 (MFA)</td>
+              <td>Partiel (Admin uniquement)</td>
+              <td>Déployer le MFA pour tous les accès distants.</td>
+            </tr>
+            <tr>
+              <td>Requirement 10 (Logging)</td>
+              <td>Non Conforme</td>
+              <td>Implémenter un SIEM centralisé.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <blockquote>
+          <strong>Note GRC :</strong> La conformité n'est pas la sécurité, mais elle fournit une base solide pour la gestion des risques.
+        </blockquote>
+
+      </div>
+    </article>
+
+    <div style="margin-top: 50px;">
+        <a href="blog.html" style="color: var(--accent-color); text-decoration: none;">← Retourner aux articles</a>
     </div>
+
   </main>
 
   <footer>
